@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework-6</title>
+      
+
+</head>
+<body>
+ <script>
+
+//                                                     Задание 2 
+// Создать еще один массив из 5 случайных чисел и написать следующие функции:
+
+
+const firstNumberArray = [12,35,48,37,82,19,30,67,98,14];
+const secondNumberArray = [48,56,99,23,82];
+
+// 1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов без повторений:
+
+function displayUniqueItems() {
+    const newNumberArray = firstNumberArray.concat(secondNumberArray); 
+    for (let i = 0; i < newNumberArray.length; i++) {
+        if (secondNumberArray.indexOf(newNumberArray[i]) !== -1) {
+           newNumberArray.splice(newNumberArray.indexOf(newNumberArray[i]), 1)
+        }
+    }
+    return newNumberArray;
+}
+console.log(displayUniqueItems(firstNumberArray, secondNumberArray))
+
+// **************************************************************************************************************
+
+
+//  2. Функция принимает 2 массива и возвращает новый массив, в котором собраны общие элементы 
+// (то есть элементы, которые встречаются и в первом и во втором массивах) без повторений:
+
+// function displayCommonItems(arr1, arr2) {
+//     const newNumberArray = [];
+//     arr1.forEach(itemfirstarray => {
+//        arr2.forEach(itemsecondarray => {
+//          if (itemfirstarray == itemsecondarray) {
+//             newNumberArray.push(itemfirstarray)
+//          }
+//        });
+//   });
+//  return newNumberArray;
+// }
+// console.log(displayCommonItems(firstNumberArray, secondNumberArray))
+
+
+// **************************************************************************************************************
+
+//  3. Функция принимает 2 массива и возвращает новый массив, в котором собраны 
+// все элементы из первого массива, которых нет во втором массиве:
+
+// function FirstArrayUniqueNumbs(arr1, arr2) {
+//     const newNumberArray = []; 
+//     for (let i = 0; i < arr1.length; i++) {
+//         if (arr2.indexOf(arr1[i]) == -1) {
+//             newNumberArray.push(arr1[i])
+//         }
+//     }
+//     return newNumberArray;
+// }
+// console.log(FirstArrayUniqueNumbs(firstNumberArray, secondNumberArray))
+
+
+ </script>
+
+</body>
+</html>
